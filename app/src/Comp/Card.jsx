@@ -6,8 +6,9 @@ export default function Card(props) {
           {props.title}
         </h2>
       </div>
-      <div class="card-body">
-        <h4>Card Text</h4>
+      <div class="card-body row">
+        <h4 class="col-8">Я карта</h4>
+        <button class="btn btn-primary col-4" onClick={props.click}>Click Me</button>
       </div>
     </div>
   )

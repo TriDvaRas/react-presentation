@@ -1,14 +1,17 @@
 
-
-import Navigation from './Comp/Navigation'
-import Card from './Comp/Card'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import Slide1 from "./Comp/Slide1"
+import Slide2 from "./Comp/Slide2"
+import Slide3 from "./Comp/Slide3"
 export default function App() {
-  const cardNames = ["Card","Cooler Card"]
+  const cardNames = ["Card", "Cooler Card"]
   return (
-    <div className="bg-dark text-light">
-      <Navigation title="C00L TitLE" links={["LinkA","LinkB"]}/>
-      <Card title={cardNames[0]} cool={false}/>
-      <Card title={cardNames[1]} cool={true}/>
-    </div>
+    <Router basename='/'>
+      <Switch>
+        <Route path="/S1"><Slide1 /></Route>
+        <Route path="/S2"><Slide2 /></Route>
+        <Route path="/S3"><Slide3 /></Route>
+      </Switch>
+    </Router>
   )
 }
