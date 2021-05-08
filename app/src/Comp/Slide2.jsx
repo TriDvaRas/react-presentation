@@ -18,6 +18,7 @@ function Navigation(props) {
       <ul class="navbar-nav">
         <li class="nav-item nav-link">{props.links[0]}</li>
         <li class="nav-item nav-link">{props.links[1]}</li>
+        <li class="nav-item nav-link">{props.links[2]}</li>
       </ul>
     </nav>
   )

@@ -2,10 +2,10 @@
 import { HashRouter as Router } from 'react-router-dom'
 import { useState } from "react";
 export default function App() {
-  const cardNames = ["Card", "Cooler Card"]
+  const cardNames = ["Card", "Card"]
   return (
     <div className="bg-dark text-light">
-      <Navigation title="C00L TitLE" links={["Link1", "Link2", "Link3"]} />
+      <Navigation title="C00l NaVbAR TiTLe" links={["Link1", "Link2", "Link3"]} />
       <Card title={cardNames[0]} cool={false} />
       <Card title={cardNames[1]} cool={true} />
       <Card title={cardNames[0]} cool={false} />
@@ -21,6 +21,7 @@ function Navigation(props) {
       <ul class="navbar-nav">
         <li class="nav-item nav-link">{props.links[0]}</li>
         <li class="nav-item nav-link">{props.links[1]}</li>
+        <li class="nav-item nav-link">{props.links[2]}</li>
       </ul>
     </nav>
   )
