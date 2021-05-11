@@ -3,12 +3,22 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.sass';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import Shrek from './Shrek.gif'
 
 ReactDOM.render(
   <React.StrictMode>
-    <div class='w-100 h-100 bg-dark text-light '>
-      <App />
-    </div>
+    <Router basename='/'>
+      <Switch>
+        <Route path="/Shrek"><img src={Shrek} /></Route>
+        <Route path="/*">
+          <div class='w-100 h-100 bg-dark text-light '>
+            <App />
+          </div>
+        </Route>
+      </Switch>
+    </Router>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

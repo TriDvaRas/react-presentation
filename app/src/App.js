@@ -3,7 +3,6 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import Slide1 from "./Comp/Slide1"
 import Slide2 from "./Comp/Slide2"
 import Slide3 from "./Comp/Slide3"
-import Shrek from './Shrek.gif'
 export default function App() {
   const cardNames = ["Card", "Cooler Card"]
   return (
@@ -12,7 +11,6 @@ export default function App() {
         <Route path="/S1"><Slide1 /></Route>
         <Route path="/S2"><Slide2 /></Route>
         <Route path="/S3"><Slide3 /></Route>
-        <Route path="/Shrek"><img src={Shrek}/></Route>
       </Switch>
     </Router>
   )
